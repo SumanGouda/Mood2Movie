@@ -1,3 +1,44 @@
-# .gitignore
+# ── Virtual environment ──────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Environment variables ─────────────────────────────────────────
 .env
-.csv
+
+# ── Database ──────────────────────────────────────────────────────
+database/imdb_movies.db
+database/raw/
+database/processed/
+
+# ── ChromeDriver cache ────────────────────────────────────────────
+drivers/
+drivers\.wdm/
+
+# ── Jupyter ───────────────────────────────────────────────────────
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# ── Python cache ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ── Model files (usually too large for git) ───────────────────────
+model/
+*.pkl
+*.h5
+*.pt
+*.pth
+*.onnx
+
+# ── OS files ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace

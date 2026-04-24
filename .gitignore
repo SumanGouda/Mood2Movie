@@ -42,3 +42,8 @@ desktop.ini
 .vscode/
 .idea/
 *.code-workspace
+
+# ─────── Database ────────────────────────────────────────────────────────
+database/imdb_movies.db
+database/raw/
+database/processed/

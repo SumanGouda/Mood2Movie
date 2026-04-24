@@ -47,3 +47,5 @@ desktop.ini
 database/imdb_movies.db
 database/raw/
 database/processed/
+.csv
+.json

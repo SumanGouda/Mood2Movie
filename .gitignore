@@ -61,5 +61,6 @@ desktop.ini
 !worker/.env.example
 
 # ── Folders ───────────────────────────────────────────────────────
-worker/
+worker/ 
+bin/movies.csv
 bin/

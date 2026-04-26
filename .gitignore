@@ -1,19 +1,26 @@
 # ── Virtual environment ──────────────────────────────────────────
-.venv/
-venv/
-env/
+.venv/ 
 
 # ── Environment variables ─────────────────────────────────────────
 .env
+share/.env
+worker/.env
 
 # ── Database ──────────────────────────────────────────────────────
 database/imdb_movies.db
 database/raw/
 database/processed/
+*.db
+*.db-wal
+*.db-shm
 
 # ── ChromeDriver cache ────────────────────────────────────────────
 drivers/
 drivers\.wdm/
+
+# ── ngrok ─────────────────────────────────────────────────────────
+ngrok.exe
+ngrok
 
 # ── Jupyter ───────────────────────────────────────────────────────
 .ipynb_checkpoints/
@@ -25,13 +32,19 @@ __pycache__/
 *.pyo
 *.pyd
 
-# ── Model files (usually too large for git) ───────────────────────
+# ── Model files ───────────────────────────────────────────────────
 model/
 *.pkl
 *.h5
 *.pt
 *.pth
 *.onnx
+
+# ── Zip files ─────────────────────────────────────────────────────
+*.zip
+
+# ── Server file — keep private ────────────────────────────────────
+api/server.py
 
 # ── OS files ──────────────────────────────────────────────────────
 .DS_Store
@@ -43,9 +56,9 @@ desktop.ini
 .idea/
 *.code-workspace
 
-# ─────── Database ────────────────────────────────────────────────────────
-database/imdb_movies.db
-database/raw/
-database/processed/
-.csv
-.json
+# ── Keep these template files ─────────────────────────────────────
+!share/.env.example
+!worker/.env.example
+
+# ── Folders ───────────────────────────────────────────────────────
+worker/

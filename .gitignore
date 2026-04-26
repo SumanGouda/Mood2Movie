@@ -1,5 +1,7 @@
 # ── Virtual environment ──────────────────────────────────────────
-.venv/ 
+.venv/
+venv/
+env/
 
 # ── Environment variables ─────────────────────────────────────────
 .env
@@ -46,6 +48,9 @@ model/
 # ── Server file — keep private ────────────────────────────────────
 api/server.py
 
+# ── Large data files ──────────────────────────────────────────────
+bin/
+
 # ── OS files ──────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
@@ -56,11 +61,5 @@ desktop.ini
 .idea/
 *.code-workspace
 
-# ── Keep these template files ─────────────────────────────────────
-!share/.env.example
-!worker/.env.example
-
-# ── Folders ───────────────────────────────────────────────────────
-worker/ 
-bin/movies.csv
-bin/
+# ── Private folders ───────────────────────────────────────────────
+worker/.env.example

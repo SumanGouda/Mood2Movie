@@ -3,8 +3,7 @@ import json
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+load_dotenv() 
 
 
 EMOTIONS = [

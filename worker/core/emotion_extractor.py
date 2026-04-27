@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
 EMOTIONS = [
@@ -76,14 +75,3 @@ Storyline: {storyline}"""
     
     return result
 
-# test_storyline = """
-# A wealthy New York City investment banking executive, 
-# Patrick Bateman, hides his alternate psychopathic ego from his
-# co-workers and friends as he delves deeper into his violent, hedonistic fantasies.
-# """
-
-# result = get_emotions_from_storyline(test_storyline)
-
-# print("🎭 Emotions :", result['emotions'])
-# print("📝 Reason   :", result['reason'])
-# print("✅ All valid :", all(e in EMOTIONS for e in result['emotions']))

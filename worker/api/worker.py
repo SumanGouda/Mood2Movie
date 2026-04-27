@@ -1,4 +1,7 @@
 import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import time
 import requests
 from itertools import cycle
@@ -6,7 +9,8 @@ from dotenv import load_dotenv
 from core.emotion_extractor import get_emotions_from_storyline
 
 load_dotenv()
- 
+
+
 #  Config 
 SERVER_URL = os.getenv("SERVER_URL")   # the ngrok URL you share
 API_SECRET = os.getenv("API_SECRET")   # the secret key you share
@@ -15,13 +19,24 @@ GROQ_KEYS  = [
     os.getenv("GROQ_API_KEY_1"),
     os.getenv("GROQ_API_KEY_2"),
     os.getenv("GROQ_API_KEY_3"),
+    os.getenv("GROQ_API_KEY_4"),
+    os.getenv("GROQ_API_KEY_5"),
+    os.getenv("GROQ_API_KEY_6")
 ]
 # remove None values in case they have fewer keys
 GROQ_KEYS  = [k for k in GROQ_KEYS if k]
 SLEEP_TIME = 2.0 / len(GROQ_KEYS)
 key_pool   = cycle(GROQ_KEYS)
 
-HEADERS    = {"X-API-Secret": API_SECRET}
+HEADERS = {
+    "X-API-Secret": API_SECRET,
+    "ngrok-skip-browser-warning": "true",
+    "User-Agent": "python-requests/2.31.0"
+}
+"""This error means the connection to your Flask server is being forcibly closed. 
+This happens because ngrok free tier shows a browser warning page for new connections
+that requires clicking "Visit Site" before allowing traffic through.
+"""
  
 #  Worker loop 
 def run_worker():

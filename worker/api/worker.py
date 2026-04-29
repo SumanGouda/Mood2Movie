@@ -21,7 +21,16 @@ GROQ_KEYS  = [
     os.getenv("GROQ_API_KEY_3"),
     os.getenv("GROQ_API_KEY_4"),
     os.getenv("GROQ_API_KEY_5"),
-    os.getenv("GROQ_API_KEY_6")
+    os.getenv("GROQ_API_KEY_6"),
+    os.getenv("GROQ_API_KEY_7"),
+    os.getenv("GROQ_API_KEY_8"),
+    os.getenv("GROQ_API_KEY_9"),
+    os.getenv("GROQ_API_KEY_10"),
+    os.getenv("GROQ_API_KEY_11"),
+    os.getenv("GROQ_API_KEY_12"),
+    os.getenv("GROQ_API_KEY_13"),
+    os.getenv("GROQ_API_KEY_14"),
+    os.getenv("GROQ_API_KEY_15")
 ]
 # remove None values in case they have fewer keys
 GROQ_KEYS  = [k for k in GROQ_KEYS if k]
@@ -29,9 +38,7 @@ SLEEP_TIME = 2.0 / len(GROQ_KEYS)
 key_pool   = cycle(GROQ_KEYS)
 
 HEADERS = {
-    "X-API-Secret": API_SECRET,
-    "ngrok-skip-browser-warning": "true",
-    "User-Agent": "python-requests/2.31.0"
+    "X-API-Secret": API_SECRET 
 }
 """This error means the connection to your Flask server is being forcibly closed. 
 This happens because ngrok free tier shows a browser warning page for new connections
